@@ -13,9 +13,9 @@ export default async function Home() {
   const movies = await fetchMovies();
 
   return (
-    <main className="min-h-screen p-8 bg-gray-100">
+    <main className="min-h-screen p-8 bg-gray-100 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-6 text-center">Movie Explorer</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 place-items-center max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-6 max-w-6xl">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
